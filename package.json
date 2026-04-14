@@ -1,0 +1,18 @@
+{
+  "name": "crypto-tracker-ai-mcp",
+  "version": "1.0.0",
+  "description": "MEOK AI Labs — crypto tracker MCP Server",
+  "main": "server.py",
+  "mcp": {
+    "name": "crypto tracker",
+    "vendor": "MEOK AI Labs",
+    "homepage": "https://meok.ai",
+    "repository": "https://github.com/CSOAI-ORG/crypto-tracker-ai-mcp",
+    "runtime": "python",
+    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+  },
+  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "author": "MEOK AI Labs <nicholas@meok.ai>",
+  "license": "MIT",
+  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/crypto-tracker-ai-mcp"}
+}
