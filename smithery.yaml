@@ -1,10 +1,5 @@
 name: crypto-tracker-ai-mcp
-description: "MEOK AI Labs — Crypto Tracker tools for AI agents and LLMs"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/crypto-tracker-ai-mcp
-license: MIT
-categories: [Finance, Cryptocurrency]
-tags: [cryptocurrency, crypto-tracking, bitcoin, ethereum, market-data]
-runtime: python
-entrypoint: server.py
+description: Track cryptocurrency prices and portfolio valuations with support for
+  major coins and simple PnL calculations.
+version: 1.0.0
+tools: []
