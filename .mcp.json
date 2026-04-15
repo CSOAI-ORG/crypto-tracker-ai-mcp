@@ -1,23 +1,63 @@
 {
   "name": "crypto-tracker-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Track cryptocurrency prices, compare assets, and manage portfolios. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
-      "name": "get_crypto_price",
-      "description": "Get crypto price",
+      "name": "track_price",
+      "description": "Get the current price, 24h change, and market cap for a cryptocurrency symbol (e.g. BTC, ETH, SOL).",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "symbol": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "symbol"
+        ]
       }
     },
     {
-      "name": "portfolio_value",
-      "description": "Calculate portfolio value",
+      "name": "compare_cryptos",
+      "description": "Compare multiple cryptocurrencies side by side. Provide comma-separated symbols (e.g. 'BTC,ETH,SOL').",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "symbols": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "symbols"
+        ]
+      }
+    },
+    {
+      "name": "calculate_portfolio",
+      "description": "Calculate total portfolio value from holdings. Provide as 'BTC:0.5,ETH:10,SOL:100' format.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "holdings": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "holdings"
+        ]
+      }
+    },
+    {
+      "name": "get_market_cap",
+      "description": "Get the top cryptocurrencies ranked by market capitalisation. Returns up to top_n results (default 5).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "top_n": {
+            "type": "integer"
+          }
+        },
         "required": []
       }
     }

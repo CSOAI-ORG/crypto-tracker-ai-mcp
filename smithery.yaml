@@ -1,10 +1,33 @@
 name: crypto-tracker-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Track cryptocurrency prices, compare assets, and manage portfolios. By
+  MEOK AI Labs.
 version: 1.0.0
 tools:
-- name: get_crypto_price
-  description: Get crypto price
-  parameters: []
-- name: portfolio_value
-  description: Calculate portfolio value
-  parameters: []
+- name: track_price
+  description: Get the current price, 24h change, and market cap for a cryptocurrency
+    symbol (e.g. BTC, ETH, SOL).
+  parameters:
+  - name: symbol
+    type: string
+    required: true
+- name: compare_cryptos
+  description: Compare multiple cryptocurrencies side by side. Provide comma-separated
+    symbols (e.g. 'BTC,ETH,SOL').
+  parameters:
+  - name: symbols
+    type: string
+    required: true
+- name: calculate_portfolio
+  description: Calculate total portfolio value from holdings. Provide as 'BTC:0.5,ETH:10,SOL:100'
+    format.
+  parameters:
+  - name: holdings
+    type: string
+    required: true
+- name: get_market_cap
+  description: Get the top cryptocurrencies ranked by market capitalisation. Returns
+    up to top_n results (default 5).
+  parameters:
+  - name: top_n
+    type: integer
+    required: false
