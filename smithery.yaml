@@ -1,4 +1,10 @@
 name: crypto-tracker-ai-mcp
 description: MEOK AI Labs MCP Server
 version: 1.0.0
-tools: []
+tools:
+- name: get_crypto_price
+  description: Get crypto price
+  parameters: []
+- name: portfolio_value
+  description: Calculate portfolio value
+  parameters: []
