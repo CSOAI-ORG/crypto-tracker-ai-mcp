@@ -1,25 +1,49 @@
-# Crypto Tracker AI MCP
+# Crypto Tracker AI MCP Server
 
-Track cryptocurrency prices and portfolio valuations with support for major coins and simple PnL calculations.
+> By [MEOK AI Labs](https://meok.ai) — Track cryptocurrency prices, compare assets, and manage portfolios
+
+## Installation
+
+```bash
+pip install crypto-tracker-ai-mcp
+```
+
+## Usage
+
+```bash
+python server.py
+```
 
 ## Tools
 
-- `get_price` — Get current price of a cryptocurrency.
-- `calculate_portfolio_value` — Calculate total portfolio value from holdings.
-- `calculate_pnl` — Calculate profit/loss for a position.
+### `track_price`
+Get the current price, 24h change, and market cap for a cryptocurrency (BTC, ETH, SOL, ADA, DOT, AVAX, LINK, MATIC, DOGE, XRP).
 
-## Install
+**Parameters:**
+- `symbol` (str): Cryptocurrency symbol (e.g., 'BTC')
 
-```bash
-pip install -e .
-```
+### `compare_cryptos`
+Compare multiple cryptocurrencies side by side ranked by market cap.
 
-## Run
+**Parameters:**
+- `symbols` (str): Comma-separated symbols (e.g., 'BTC,ETH,SOL')
 
-```bash
-python -m crypto-tracker-ai-mcp.server
-```
+### `calculate_portfolio`
+Calculate total portfolio value from holdings.
+
+**Parameters:**
+- `holdings` (str): Holdings as 'BTC:0.5,ETH:10,SOL:100' format
+
+### `get_market_cap`
+Get the top cryptocurrencies ranked by market capitalisation.
+
+**Parameters:**
+- `top_n` (int): Number of results (default 5)
+
+## Authentication
+
+Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
 
 ## License
 
-MIT
+MIT — MEOK AI Labs
