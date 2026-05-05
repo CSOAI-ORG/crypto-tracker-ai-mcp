@@ -1,49 +1,38 @@
-# Crypto Tracker AI MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Track cryptocurrency prices, compare assets, and manage portfolios
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/crypto-tracker-ai-mcp)](https://github.com/CSOAI-ORG/crypto-tracker-ai-mcp/stargazers)
+
+# ucryptoU trackerU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/crypto-tracker-ai-mcp)](https://www.npmjs.com/package/@meok-ai/crypto-tracker-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/crypto-tracker-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install crypto-tracker-ai-mcp
+# or
+npm install -g @meok-ai/crypto-tracker-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `track_price`
-Get the current price, 24h change, and market cap for a cryptocurrency (BTC, ETH, SOL, ADA, DOT, AVAX, LINK, MATIC, DOGE, XRP).
-
-**Parameters:**
-- `symbol` (str): Cryptocurrency symbol (e.g., 'BTC')
-
-### `compare_cryptos`
-Compare multiple cryptocurrencies side by side ranked by market cap.
-
-**Parameters:**
-- `symbols` (str): Comma-separated symbols (e.g., 'BTC,ETH,SOL')
-
-### `calculate_portfolio`
-Calculate total portfolio value from holdings.
-
-**Parameters:**
-- `holdings` (str): Holdings as 'BTC:0.5,ETH:10,SOL:100' format
-
-### `get_market_cap`
-Get the top cryptocurrencies ranked by market capitalisation.
-
-**Parameters:**
-- `top_n` (int): Number of results (default 5)
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
