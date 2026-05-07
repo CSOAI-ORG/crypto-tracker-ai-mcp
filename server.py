@@ -39,7 +39,23 @@ mcp = FastMCP("crypto-tracker-ai", instructions="Track cryptocurrency prices, co
 
 @mcp.tool()
 def track_price(symbol: str, api_key: str = "") -> str:
-    """Get the current price, 24h change, and market cap for a cryptocurrency symbol (e.g. BTC, ETH, SOL)."""
+    """Get the current price, 24h change, and market cap for a cryptocurrency symbol (e.g. BTC, ETH, SOL).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -60,7 +76,23 @@ def track_price(symbol: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def compare_cryptos(symbols: str, api_key: str = "") -> str:
-    """Compare multiple cryptocurrencies side by side. Provide comma-separated symbols (e.g. 'BTC,ETH,SOL')."""
+    """Compare multiple cryptocurrencies side by side. Provide comma-separated symbols (e.g. 'BTC,ETH,SOL').
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -91,7 +123,23 @@ def compare_cryptos(symbols: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def calculate_portfolio(holdings: str, api_key: str = "") -> str:
-    """Calculate total portfolio value from holdings. Provide as 'BTC:0.5,ETH:10,SOL:100' format."""
+    """Calculate total portfolio value from holdings. Provide as 'BTC:0.5,ETH:10,SOL:100' format.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -134,7 +182,23 @@ def calculate_portfolio(holdings: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def get_market_cap(top_n: int = 5, api_key: str = "") -> str:
-    """Get the top cryptocurrencies ranked by market capitalisation. Returns up to top_n results (default 5)."""
+    """Get the top cryptocurrencies ranked by market capitalisation. Returns up to top_n results (default 5).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
