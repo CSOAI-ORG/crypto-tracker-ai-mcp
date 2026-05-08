@@ -1,45 +1,58 @@
-[![crypto-tracker-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/crypto-tracker-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/crypto-tracker-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/crypto-tracker-ai-mcp)](https://pypi.org/project/crypto-tracker-ai-mcp/)
-
-[![crypto-tracker-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/crypto-tracker-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/crypto-tracker-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/crypto-tracker-ai-mcp)](https://github.com/CSOAI-ORG/crypto-tracker-ai-mcp/stargazers)
+# Crypto Tracker Ai MCP
 
-# ucryptoU trackerU aiU mcp
+**MCP server for crypto tracker ai mcp operations**
 
-****
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/crypto-tracker-ai-mcp)](https://www.npmjs.com/package/@meok-ai/crypto-tracker-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-crypto-tracker-ai-mcp)](https://pypi.org/project/meok-crypto-tracker-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/crypto-tracker-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Crypto Tracker Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `track_price` | Get the current price, 24h change, and market cap for a cryptocurrency symbol (e |
+| `compare_cryptos` | Compare multiple cryptocurrencies side by side. Provide comma-separated symbols  |
+| `calculate_portfolio` | Calculate total portfolio value from holdings. Provide as 'BTC:0.5,ETH:10,SOL:10 |
+| `get_market_cap` | Get the top cryptocurrencies ranked by market capitalisation. Returns up to top_ |
 
 ## Installation
 
 ```bash
-pip install crypto-tracker-ai-mcp
-# or
-npm install -g @meok-ai/crypto-tracker-ai-mcp
+pip install meok-crypto-tracker-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "crypto-tracker-ai": {
+      "command": "python",
+      "args": ["-m", "meok_crypto_tracker_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 4 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/crypto-tracker-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
