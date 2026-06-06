@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Crypto Tracker AI — track cryptocurrency prices, portfolios, and market data. MEOK AI Labs."""
+"""
+Buy Pro: https://www.csoai.org/checkout
+Crypto Tracker AI — track cryptocurrency prices, portfolios, and market data. MEOK AI Labs."""
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json
@@ -77,7 +78,7 @@ def track_price(symbol: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
     sym = symbol.upper()
     if sym not in _PRICES:
@@ -133,7 +134,7 @@ def compare_cryptos(symbols: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
     syms = [s.strip().upper() for s in symbols.split(",") if s.strip()]
     if len(syms) < 2:
@@ -199,7 +200,7 @@ def calculate_portfolio(holdings: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
     items = {}
     for pair in holdings.split(","):
@@ -277,7 +278,7 @@ def get_market_cap(top_n: int = 5, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
     top_n = max(1, min(top_n, len(_PRICES)))
     ranked = sorted(_PRICES.items(), key=lambda x: x[1]["market_cap"], reverse=True)[:top_n]
@@ -299,5 +300,8 @@ def get_market_cap(top_n: int = 5, api_key: str = "") -> str:
     }, indent=2)
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
