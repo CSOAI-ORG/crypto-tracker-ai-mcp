@@ -1,0 +1,31 @@
+# Crypto Tracker Ai MCP
+
+> Track cryptocurrency prices, compare assets, and manage portfolios
+
+`crypto-tracker-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install crypto-tracker-ai-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx crypto-tracker-ai-mcp
+```
+
+## Tools
+
+- `track_price` — Get the current price, 24h change, and market cap for a cryptocurrency symbol (e.g. BTC, ETH, SOL).
+- `compare_cryptos` — Compare multiple cryptocurrencies side by side. Provide comma-separated symbols (e.g. 'BTC,ETH,SOL').
+- `calculate_portfolio` — Calculate total portfolio value from holdings. Provide as 'BTC:0.5,ETH:10,SOL:100' format.
+- `get_market_cap` — Get the top cryptocurrencies ranked by market capitalisation. Returns up to top_n results (default 5).
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/crypto-tracker-ai-mcp
+- PyPI: https://pypi.org/project/crypto-tracker-ai-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
