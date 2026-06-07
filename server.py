@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Buy Pro: https://www.csoai.org/checkout
 Crypto Tracker AI — track cryptocurrency prices, portfolios, and market data. MEOK AI Labs."""
 import sys, os
 from auth_middleware import check_access

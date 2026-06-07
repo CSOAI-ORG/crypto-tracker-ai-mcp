@@ -1,0 +1,9 @@
+# crypto-tracker-ai-mcp - Auto-trigger Rules
+
+When the user asks about crypto tracker, use crypto-tracker-ai-mcp tools: track_price, compare_cryptos, calculate_portfolio, get_market_cap
+
+**MCP server for crypto tracker ai mcp operations**
+
+Install: `pip install crypto-tracker-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

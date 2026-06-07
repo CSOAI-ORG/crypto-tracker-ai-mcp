@@ -1,0 +1,25 @@
+{
+  "name": "crypto-tracker-ai-mcp",
+  "title": "Crypto Tracker Ai Mcp",
+  "description": "AI-powered crypto tracker ai MCP server for agents. Supports track price, compare cryptos, calculate portfolio. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "track_price"
+    },
+    {
+      "name": "compare_cryptos"
+    },
+    {
+      "name": "calculate_portfolio"
+    },
+    {
+      "name": "get_market_cap"
+    }
+  ]
+}
