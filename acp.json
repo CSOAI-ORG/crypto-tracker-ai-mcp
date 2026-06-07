@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "crypto-tracker-ai-mcp",
+    "description": "Crypto Tracker Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "crypto-tracker-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "track_price",
+      "compare_cryptos",
+      "calculate_portfolio",
+      "get_market_cap"
+    ]
+  }
+}

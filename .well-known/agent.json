@@ -1,0 +1,59 @@
+{
+  "name": "crypto-tracker-ai-mcp",
+  "description": "Crypto Tracker Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/crypto-tracker-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "track_price",
+      "name": "Track Price",
+      "description": "track_price via crypto-tracker-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "compare_cryptos",
+      "name": "Compare Cryptos",
+      "description": "compare_cryptos via crypto-tracker-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "calculate_portfolio",
+      "name": "Calculate Portfolio",
+      "description": "calculate_portfolio via crypto-tracker-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_market_cap",
+      "name": "Get Market Cap",
+      "description": "get_market_cap via crypto-tracker-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
