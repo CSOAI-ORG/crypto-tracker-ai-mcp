@@ -113,3 +113,28 @@ Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographical
 
 <!-- BUY-LADDER:END -->
 
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "crypto-tracker-ai-mcp": {
+      "command": "uvx",
+      "args": ["crypto-tracker-ai-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install crypto-tracker-ai-mcp` then run the `crypto-tracker-ai-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `track_price` to …"
+- "Use `compare_cryptos` to …"
+- "Use `calculate_portfolio` to …"
